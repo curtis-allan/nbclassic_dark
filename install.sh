@@ -15,8 +15,8 @@ for file in custom.css custom.js; do
     fi
     
     # Copy new file
-    if [ -f ".jupyter/custom/$file" ]; then
-        cp ".jupyter/custom/$file" "$custom_dir/"
+    if [ -f "custom/$file" ]; then
+        cp "custom/$file" "$custom_dir/"
         echo "Installed $file"
     else
         echo "Warning: $file not found in source directory"
