@@ -1,28 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
-body {
-	font-family: "Geist Mono", monospace;
-	font-weight: 550 !important;
-	letter-spacing: -0.4q;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	max-width: 98%;
-	margin: 0 auto;
-	overflow: hidden;
-}
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
 :root {
 	--shadow: rgba(50, 50, 50, 0.6);
-	font-optical-sizing: auto;
-	filter: brightness(1);
+	--system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+		"Segoe UI Emoji", "Segoe UI Symbol";
 }
-li a {
-	font-weight: 500 !important;
-	letter-spacing: -0.2q;
+body {
+	font-family: var(--system-ui);
+	height: 100vh;
+	overflow: clip;
+	display: flex;
+	flex-direction: column;
 }
 .prompt_container > .prompt {
 	min-width: 10ex !important;
-}
-.btn-warning {
-	background: lab(from red 60% a b / 0.5);
 }
 input {
 	background: whitesmoke !important;
@@ -49,31 +40,39 @@ button,
 .btn {
 	color: black !important;
 	border-radius: 4px !important;
-	font-weight: 550 !important;
 	transition: all 150ms ease allow-discrete;
 	border: 1px outset #e3e3e3 !important;
 	&:hover {
 		backdrop-filter: brightness(0.8);
 	}
 }
+.btn-warning,
+.btn-danger {
+	background-color: hsl(from crimson h s l / 0.8) !important;
+	color: white !important;
+}
 .container-fluid {
 	display: flex;
 	justify-content: space-between;
 	flex-direction: row-reverse;
 	align-items: center;
-
 	& .navbar-collapse {
 		flex: auto;
 	}
 }
+
+@media (width < 760px) {
+	#theme-toggle {
+		display: none;
+	}
+}
 .close {
-	padding: 0.1em 0.3em !important;
+	padding-inline: 0.3em 0.3em !important;
 }
 #header {
 	& div {
 		border: none !important;
 	}
-	font-size: 10pt;
 	background-color: ghostwhite !important;
 	border-radius: 0 0 5px 5px !important;
 	padding: 0.3rem 0.25rem;
@@ -97,14 +96,13 @@ button,
 	box-shadow: 0px 5px 10px 6px var(--shadow) !important;
 }
 #notebook-container {
-	border-radius: 7px !important;
+	border-radius: 4px !important;
 	box-shadow: 0px 1px 4px 2px var(--shadow) !important;
 	-webkit-box-shadow: 0px 1px 4px 2px var(--shadow) !important;
 }
 li.dropdown:not(.dropdown-submenu) {
-	border-radius: 5px;
-	border: 1px outset darkgray;
-	margin-left: 0.3rem;
+	border-bottom: 1.5px solid darkgray;
+	margin-left: 0.6rem !important;
 
 	&:hover {
 		backdrop-filter: brightness(0.9) !important;
@@ -114,41 +112,25 @@ li.dropdown:not(.dropdown-submenu) {
 	box-shadow: 0px 1px 3px 0px var(--shadow) !important;
 	-webkit-box-shadow: 0px 1px 3px 0px var(--shadow) !important;
 }
-#menus {
-	background: transparent !important;
-}
-#menubar {
-	margin-top: 0 !important;
-	background: transparent !important;
-}
-#menubar-container {
-	background: transparent !important;
-	width: 100%;
-}
 .container {
 	width: 99% !important;
-}
-.CodeMirror,
-.input {
-	font-family: "JetBrains Mono", serif;
-}
-.output_wrapper {
-	font-family: "Geist Mono", monospace !important;
-	font-weight: 500 !important;
-	line-height: 17px !important;
 }
 code,
 kbd,
 pre,
-samp {
-	font-family: "Geist Mono", monospace !important;
+samp,
+.CodeMirror {
+	font-family: "JetBrains Mono", monospace;
+	font-size-adjust: ch-width from-font;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 550 !important;
 }
 .dark {
 	--shadow: rgba(255, 255, 255, 0.9);
-	filter: invert(0.92) hue-rotate(180deg);
+	filter: invert(0.9) hue-rotate(180deg);
 	& .btn,
-	button,
-	li.dropdown:not(.dropdown-submenu) {
+	button {
 		border-style: inset !important;
 	}
 }
