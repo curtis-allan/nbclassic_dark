@@ -22,24 +22,24 @@ chmod +x install.sh
 
 ### Home - Light:
 
-<img width="1489" alt="Jupyter home light mode" src="https://github.com/user-attachments/assets/f28f1ad8-ae5e-4203-bf71-6ba700710b15">
+![nbclassic_dark_ · 12 37am · 12-06](https://github.com/user-attachments/assets/d105c2b8-c2ee-4c97-8a41-570c88ac3c4e)
 
 ---
 
 ### Home - Dark:
 
-<img width="1498" alt="Jupyter home dark mode" src="https://github.com/user-attachments/assets/bdad6083-99d7-494e-b59b-3b2b940c35ba">
+![nbclassic_dark_](https://github.com/user-attachments/assets/9c6c71e4-5c51-4f71-9cc5-8d3bed9fa951)
 
 ---
 
 ### NB - Light:
 
-<img width="1492" alt="Notebook light mode" src="https://github.com/user-attachments/assets/20ceab8c-8049-45f1-8191-bb8a565bba54">
+![00_core - Jupyter Notebook](https://github.com/user-attachments/assets/9ec87bc4-b730-48f6-9a9e-48132e9ac170)
 
 ---
 
 ### NB - Dark: 
 
-<img width="1494" alt="Notebook dark mode" src="https://github.com/user-attachments/assets/586fa03d-def0-43a9-9b59-7d55f7236214">
+![00_core - Jupyter Notebook · 12 39am · 12-06](https://github.com/user-attachments/assets/3f1cbae1-440c-4ffd-ad0f-e93dda204c1d)
 
 ---
