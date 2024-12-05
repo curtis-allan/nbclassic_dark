@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+body {
+	font-family: "Geist Mono", monospace;
+	font-weight: 550 !important;
+	letter-spacing: -0.4q;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	max-width: 98%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+:root {
+	--shadow: rgba(50, 50, 50, 0.6);
+	font-optical-sizing: auto;
+	filter: brightness(1);
+}
+li a {
+	font-weight: 500 !important;
+	letter-spacing: -0.2q;
+}
+.prompt_container > .prompt {
+	min-width: 10ex !important;
+}
+.btn-warning {
+	background: lab(from red 60% a b / 0.5);
+}
+input {
+	background: whitesmoke !important;
+	border: 1px solid #7a7a7a;
+	border-radius: 4px;
+	padding: 0 0.5em;
+}
+#theme-toggle {
+	background: whitesmoke;
+	filter: invert();
+	&:is([data-state="dark"]) {
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-sun'%3E%3Ccircle cx='12' cy='12' r='4'/%3E%3Cpath d='M12 2v2'/%3E%3Cpath d='M12 20v2'/%3E%3Cpath d='m4.93 4.93 1.41 1.41'/%3E%3Cpath d='m17.66 17.66 1.41 1.41'/%3E%3Cpath d='M2 12h2'/%3E%3Cpath d='M20 12h2'/%3E%3Cpath d='m6.34 17.66-1.41 1.41'/%3E%3Cpath d='m19.07 4.93-1.41 1.41'/%3E%3C/svg%3E");
+	}
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-moon'%3E%3Cpath d='M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 3.5rem;
+	height: 3.5rem;
+	margin-left: 0.5rem;
+	&:hover {
+		backdrop-filter: brightness(0.8);
+	}
+}
+button,
+.btn {
+	color: black !important;
+	border-radius: 4px !important;
+	font-weight: 550 !important;
+	transition: all 150ms ease allow-discrete;
+	border: 1px outset #e3e3e3 !important;
+	&:hover {
+		backdrop-filter: brightness(0.8);
+	}
+}
+.container-fluid {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row-reverse;
+	align-items: center;
+
+	& .navbar-collapse {
+		flex: auto;
+	}
+}
+.close {
+	padding: 0.1em 0.3em !important;
+}
+#header {
+	& div {
+		border: none !important;
+	}
+	font-size: 10pt;
+	background-color: ghostwhite !important;
+	border-radius: 0 0 5px 5px !important;
+	padding: 0.3rem 0.25rem;
+	box-shadow: 0px 1px 3px 0px var(--shadow) !important;
+	-webkit-box-shadow: 0px 1px 3px 0px var(--shadow) !important;
+	outline: 1px dotted #a1a1a1;
+}
+.kb kbd {
+	background: transparent !important;
+	border-radius: 4px !important;
+	border: 1.5px dotted steelblue !important;
+	padding-inline: 0.5em;
+	color: black !important;
+	letter-spacing: 1.2q !important;
+}
+.modal-backdrop {
+	background-color: #fff !important;
+}
+.modal-content {
+	-webkit-box-shadow: 0px 5px 10px 6px var(--shadow) !important;
+	box-shadow: 0px 5px 10px 6px var(--shadow) !important;
+}
+#notebook-container {
+	box-shadow: 0px 1px 4px 2px var(--shadow) !important;
+	-webkit-box-shadow: 0px 1px 4px 2px var(--shadow) !important;
+}
+li.dropdown:not(.dropdown-submenu) {
+	border-radius: 5px;
+	border: 1px outset darkgray;
+	margin-left: 0.3rem;
+
+	&:hover {
+		backdrop-filter: brightness(0.9) !important;
+	}
+}
+.dropdown-menu {
+	box-shadow: 0px 3px 6px 3px var(--shadow) !important;
+	-webkit-box-shadow: 0px 3px 6px 3px var(--shadow) !important;
+}
+#menus {
+	background: transparent !important;
+}
+#menubar {
+	margin-top: 0 !important;
+	background: transparent !important;
+}
+#menubar-container {
+	background: transparent !important;
+	width: 100%;
+}
+#notebook-container {
+	width: 99% !important;
+	border-radius: 10px !important;
+}
+.CodeMirror,
+.input {
+	font-family: "JetBrains Mono", serif;
+}
+.output_wrapper {
+	font-family: "Geist Mono", monospace !important;
+	font-weight: 500 !important;
+	line-height: 17px !important;
+}
+code,
+kbd,
+pre,
+samp {
+	font-family: "Geist Mono", monospace !important;
+}
+.dark {
+	--shadow: rgba(255, 255, 255, 0.9);
+	filter: invert(0.92) hue-rotate(180deg);
+	& .btn,
+	button,
+	li.dropdown:not(.dropdown-submenu) {
+		border-style: inset !important;
+	}
+}
