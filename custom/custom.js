@@ -16,7 +16,12 @@ const initialDarkMode =
 
 updateTheme(initialDarkMode);
 
-const button = document.createElement('li');
+let button = document.createElement('li');
+
+if (!document.querySelector('.container-fluid')) {
+	button = document.createElement('button');
+	button.classList.add('btn-sm', 'navbar-btn');
+}
 button.id = 'theme-toggle';
 button.classList.add('btn');
 
@@ -39,7 +44,8 @@ const navbar = document.querySelector('.container-fluid');
 if (navbar) {
 	navbar.prepend(button);
 } else {
-	console.warn(`Couldn't find element: ${navbar}`);
+	const header = document.querySelector('#header-container');
+	header.appendChild(button);
 }
 
 const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
