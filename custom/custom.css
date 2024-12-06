@@ -12,8 +12,11 @@ body {
 	display: flex;
 	flex-direction: column;
 }
-.prompt_container > .prompt {
+.prompt {
 	min-width: 10ex !important;
+	& .fa-fw {
+		width: unset !important;
+	}
 }
 input {
 	background: whitesmoke !important;
