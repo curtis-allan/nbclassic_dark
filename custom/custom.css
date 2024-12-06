@@ -13,10 +13,7 @@ body {
 	flex-direction: column;
 }
 .prompt {
-	min-width: 10ex !important;
-	& .fa-fw {
-		width: unset !important;
-	}
+	min-width: 13ex !important;
 }
 input {
 	background: whitesmoke !important;
